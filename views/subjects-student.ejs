@@ -1,0 +1,33 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/student-navbar"); -%>
+
+  <div class="centered">
+
+      <% if (data.length != 0) { %>
+          <div class="form-table">
+
+            <img src="images/book.svg" alt="Subject">
+            <p class="lead">Subject</p>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Subject</th>
+                  </tr>
+                </thead>
+                <tbody>
+          <% for (let i = 0; i < data.length; i++) { %>
+            <tr>
+              <th scope="row"><%= i+1 %></th>
+              <td><%= data[i].subject %></td>
+            </tr>
+          <% } %>
+              </tbody>
+            </table>
+
+          </div>
+      <% } %>
+
+<%- include("partials/footer"); -%>

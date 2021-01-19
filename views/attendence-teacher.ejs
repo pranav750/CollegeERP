@@ -1,0 +1,75 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/teacher-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/attendence-img"); -%>
+
+      <form action="/attendence-teacher" method="post">
+
+        <div class="row">
+          <div class="col">
+            <select class="form-select" name="branch" placeholder="Branch" required>
+              <option value="" selected>Branch</option>
+              <option value="<%= teacher.branch %>"><%= teacher.branch %></option>
+            </select><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/year-entry"); -%>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/section-entry"); -%>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Give</button>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+    <% if (data.length != 0) { %>
+      <form action="/attendence-given" method="post">
+        <div class="form-table">
+            <%- include("partials/entry/date-entry"); -%>
+            <%- include("partials/entry/subject-entry"); -%>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sr No.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col">Section</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Attendence</th>
+                </tr>
+              </thead>
+              <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= data[i].firstName %> <%= data[i].lastName %></td>
+            <td><%= data[i].branch %></td>
+            <td><%= data[i].section %></td>
+            <td><%= data[i].year %></td>
+            <td><input class="form-check-input" type="checkbox" name="<%= data[i].email %>" value="true"></td>
+          </tr>
+        <% } %>
+            </tbody>
+          </table>
+
+          <button type="submit" class="btn btn-outline-dark btn-md">Submit</button>
+
+        </div>
+
+      </form>
+    <% } %>
+
+<%- include("partials/footer"); -%>

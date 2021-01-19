@@ -1,0 +1,28 @@
+<%- include("partials/header"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/student-img"); -%>
+
+      <form action="/student-login" method="post">
+
+        <div class="row">
+          <%- include("partials/entry/email-entry"); -%>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/password-entry"); -%>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Login</button>
+        <a class="btn btn-outline-dark btn-md" href="/" role="button">Back</a>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,35 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/admin-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-table">
+
+      <img src="images/admin.svg" alt="Admin">
+      <p class="lead"><%= data.firstName %> <%= data.lastName %></p>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">First Name</th>
+            <td><%= data.firstName %></td>
+          </tr>
+          <tr>
+            <th scope="row">Last Name</th>
+            <td><%= data.lastName %></td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td><%= data.email %></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form action="/admin-home" method="post">
+        <button type="submit" class="btn btn-outline-dark btn-md" >Log Out</button>
+      </form>
+
+    </div>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,70 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/student-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/student-img"); -%>
+
+      <form action="/update-student" method="post">
+
+        <div class="row">
+          <div class="col">
+            <input type="email" class="form-control" name="email" placeholder="Email Address"><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <select class="form-select" name="branch" placeholder="Branch">
+              <option value="" selected>Branch</option>
+              <option value="CS">CS</option>
+              <option value="IT">IT</option>
+              <option value="Mechanical">Mechanical</option>
+              <option value="ECE">ECE</option>
+              <option value="EXTC">EXTC</option>
+              <option value="Electrical">Electrical</option>
+              <option value="Civil">Civil</option>
+              <option value="Production">Production</option>
+            </select><br>
+          </div>
+          <%- include("partials/entry/contact-entry"); -%>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <select class="form-select" name="section" placeholder="Section">
+              <option value="" selected>Section</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select><br>
+          </div>
+
+          <div class="col">
+            <select class="form-select" name="year" placeholder="Year">
+              <option value="" selected>Year</option>
+              <option value="1">First Year</option>
+              <option value="2">Second Year</option>
+              <option value="3">Third Year</option>
+              <option value="4">Fourth Year</option>
+            </select><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/student-password-entry"); -%>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Update</button>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+<%- include("partials/footer"); -%>

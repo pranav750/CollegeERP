@@ -1,0 +1,55 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/admin-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/subject-img"); -%>
+
+      <form action="/subjects" method="post">
+
+        <div class="row">
+          <%- include("partials/entry/branch-entry"); -%>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/year-entry"); -%>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Show</button>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+    <% if (data.length != 0) { %>
+        <div class="form-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sr No.</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col">Year</th>
+                </tr>
+              </thead>
+              <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= data[i].subject %></td>
+            <td><%= data[i].branch %></td>
+            <td><%= data[i].year %></td>
+          </tr>
+        <% } %>
+            </tbody>
+          </table>
+
+        </div>
+    <% } %>
+
+<%- include("partials/footer"); -%>

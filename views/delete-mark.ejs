@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/admin-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/marks-img"); -%>
+
+      <form action="/delete-mark" method="post">
+
+        <div class="row">
+          <%- include("partials/entry/test-entry"); -%>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/admin-password-entry"); -%>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Delete</button>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+<%- include("partials/footer"); -%>

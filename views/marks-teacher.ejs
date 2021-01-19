@@ -1,0 +1,79 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/teacher-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/marks-img"); -%>
+
+      <form action="/marks-teacher" method="post">
+
+        <div class="row">
+          <%- include("partials/entry/test-entry"); -%>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <select class="form-select" name="branch" placeholder="Branch" required>
+              <option value="" selected>Branch</option>
+              <option value="<%= teacher.branch %>"><%= teacher.branch %></option>
+            </select><br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <select class="form-select" name="year" placeholder="Year" required>
+              <option value="" selected>Year</option>
+              <option value="<%= teacher.year %>"><%= teacher.year %></option>
+            </select><br>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Give</button>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+    <% if (data.length != 0) { %>
+      <form action="/marks-given" method="post">
+        <div class="form-table">
+            <%- include("partials/entry/subject-entry"); -%>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sr No.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col">Section</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Marks</th>
+                </tr>
+              </thead>
+              <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= data[i].firstName %> <%= data[i].lastName %></td>
+            <td><%= data[i].branch %></td>
+            <td><%= data[i].section %></td>
+            <td><%= data[i].year %></td>
+            <td><input type="number" class="form-control marks-input" name="<%= data[i].email %>" placeholder="" max="<%= testMark %>" required autocomplete="off"><p>/<%= testMark %></p><br></td>
+          </tr>
+        <% } %>
+            </tbody>
+          </table>
+
+          <button type="submit" class="btn btn-outline-dark btn-md">Submit</button>
+
+        </div>
+
+      </form>
+    <% } %>
+
+<%- include("partials/footer"); -%>

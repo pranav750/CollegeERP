@@ -1,0 +1,51 @@
+<% if (message != "") { %>
+<%  if (message === "Error") { %>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-danger alert-msg" role="alert">
+             Error!
+          </div>
+        </div>
+      </div>
+<%   } else if (message === "Password") { %>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-danger alert-msg" role="alert">
+             Passwords did not match
+          </div>
+        </div>
+      </div>
+<%   } else if (message === "Admin Password" || message === "Teacher Password" || message === "Student Password" || message === "Old Password") { %>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-danger alert-msg" role="alert">
+             Intruder Alert!
+          </div>
+        </div>
+      </div>
+<%  } else if (message === "Already") { %>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-danger alert-msg" role="alert">
+              Already exists!
+          </div>
+        </div>
+      </div>
+<%  } else if (message === "Email") { %>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-danger alert-msg" role="alert">
+            Email did not match
+          </div>
+        </div>
+      </div>
+<%  } else if (message === "Success") { %>
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-success alert-msg" role="alert">
+            Success!
+          </div>
+        </div>
+      </div>
+<%  } %>
+<% } %>

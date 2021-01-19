@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ERP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#burgerSymbol">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="burgerSymbol">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/admin-home"><%= admin.firstName %> <%= admin.lastName %></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Add
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/add-teacher">Add Teacher</a></li>
+            <li><a class="dropdown-item" href="/add-student">Add Student</a></li>
+            <li><a class="dropdown-item" href="/add-subject">Add Subject</a></li>
+            <li><a class="dropdown-item" href="/add-admin">Add Admin</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Delete
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/delete-teacher">Delete Teacher</a></li>
+            <li><a class="dropdown-item" href="/delete-student">Delete Student</a></li>
+            <li><a class="dropdown-item" href="/delete-subject">Delete Subject</a></li>
+            <li><a class="dropdown-item" href="/delete-admin">Delete Admin</a></li>
+            <li><a class="dropdown-item" href="/delete-mark">Delete Marks</a></li>
+            <li><a class="dropdown-item" href="/delete-attendence">Delete Attendence</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/teachers">Teachers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/students">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/subjects">Subjects</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

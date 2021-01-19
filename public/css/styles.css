@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+img {
+  width: 8rem;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+footer {
+  margin: 50px;
+  font-size: 0.8rem;
+  color: #eeeeee;
+  text-align: center;
+}
+
+nav {
+  padding: 10px;
+  background-color: white;
+}
+
+nav li {
+  margin-right: 30px;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+#main-heading {
+  padding-bottom: 30px;
+  color: #eeeeee;
+}
+
+.btn-main {
+  margin: 5px;
+  width: 100%;
+}
+
+.centered {
+  padding: 2% 10%;
+  text-align: center;
+  background-image: -webkit-linear-gradient(65deg, #393e46 50%, #222831 50%);
+  min-height: 754px;
+}
+
+.main-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alert-msg {
+  margin: 10px;
+}
+
+.card {
+  width: 18rem;
+  height: 20rem;
+  text-align: center;
+  margin: 50px auto;
+  padding: 5px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.form-card {
+  width: 40%;
+  margin: 60px auto;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.form-table {
+  width: 70%;
+  margin: 80px auto;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.marks-input {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.date {
+  margin: 10px;
+}
+
+@media (max-width: 1399.98px) {
+
+  .form-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1199.98px) {
+
+  .centered {
+    padding: 2% 8%;
+  }
+
+  .form-card, .form-table {
+    width: 50%;
+  }
+
+  .marks-input {
+    width: 40%;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  .centered {
+    padding: 2% 5%;
+  }
+
+  .form-card, .form-table {
+    width: 65%;
+  }
+
+  .marks-input {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+
+  .centered {
+    padding: 2% 5%;
+  }
+
+  .form-card, .form-table {
+    width: 85%;
+  }
+
+  .marks-input {
+    width: 60%;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+
+  .centered {
+    padding: 2%;
+  }
+
+  .form-card, .form-table {
+    width: 90%;
+  }
+
+  .marks-input {
+    width: 80%;
+  }
+}

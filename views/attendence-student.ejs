@@ -1,0 +1,55 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/student-navbar"); -%>
+
+    <div class="centered">
+
+      <div class="form-card">
+
+        <%- include("partials/images/attendence-img"); -%>
+
+        <form action="/attendence-student" method="post">
+
+          <div class="row">
+            <%- include("partials/entry/date-entry"); -%>
+          </div>
+
+          <div class="row">
+            <%- include("partials/entry/subject-entry"); -%>
+          </div>
+
+          <button type="submit" class="btn btn-outline-dark btn-md">Give</button>
+
+          <%- include("partials/error"); -%>
+
+        </form>
+
+      </div>
+
+      <% if (Object.keys(data).length != 0) { %>
+        <div class="form-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sr No.</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Attendence</th>
+                </tr>
+              </thead>
+              <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><%= data.date %></td>
+            <td><%= data.subject.subject %></td>
+            <td><%= data.student.firstName %> <%= data.student.lastName %></td>
+            <td>Present</td>
+          </tr>
+            </tbody>
+          </table>
+
+        </div>
+      <% } %>
+
+<%- include("partials/footer"); -%>

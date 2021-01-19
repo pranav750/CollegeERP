@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ERP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#burgerSymbol">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="burgerSymbol">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/student-home"><%= student.firstName %> <%= student.lastName %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/update-student">Update Profile</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Academic
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/marks-student">Test Performance</a></li>
+            <li><a class="dropdown-item" href="/attendence-student">Attendence</a></li>
+            <li><a class="dropdown-item" href="/subjects-student">Subjects</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/password-student">Update Password</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

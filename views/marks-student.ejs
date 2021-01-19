@@ -1,0 +1,59 @@
+<%- include("partials/header"); -%>
+
+  <%- include("partials/student-navbar"); -%>
+
+  <div class="centered">
+
+    <div class="form-card">
+
+      <%- include("partials/images/marks-img"); -%>
+
+      <form action="/marks-student" method="post">
+
+        <div class="row">
+          <%- include("partials/entry/test-entry"); -%>
+        </div>
+
+        <div class="row">
+          <%- include("partials/entry/subject-entry"); -%>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Give</button>
+
+        <%- include("partials/error"); -%>
+
+      </form>
+
+    </div>
+
+    <% if (data.length != 0) { %>
+        <div class="form-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sr No.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Test Name</th>
+                  <th scope="col">Test Marks</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= data[i].student.firstName %> <%= data[i].student.lastName %></td>
+            <td><%= data[i].subject.subject %></td>
+            <td><%= data[i].testName %></td>
+            <td><%= data[i].testMarks %></td>
+            <td><%= data[i].total %></td>
+          </tr>
+        <% } %>
+            </tbody>
+          </table>
+
+        </div>
+    <% } %>
+
+<%- include("partials/footer"); -%>
