@@ -1,23 +1,49 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { Button } from "@material-ui/core";
-import { NavLink } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useStyles from "./styles";
 
 const StudentNavbar = () => {
   const classes = useStyles();
-  const data = useSelector((state) => state.user);
+  const location = useLocation();
+  const path = location.pathname;
+  const user = useSelector((state) => state.profile.user);
 
   return (
     <Fragment>
       <Button
-        className={classes.button}
-        activeClassName={classes.active}
-        exact
-        component={NavLink}
-        to={`/student/home/${data.user.registrationID}`}
+        className={
+          path === `/student/home/${user.registrationID}`
+            ? classes.active
+            : classes.button
+        }
+        component={Link}
+        to={`/student/home/${user.registrationID}`}
       >
         Home
+      </Button>
+      <Button
+        className={
+          path === `/student/get-marks/${user.registrationID}`
+            ? classes.active
+            : classes.button
+        }
+        component={Link}
+        to={`/student/get-marks/${user.registrationID}`}
+      >
+        Get Marks
+      </Button>
+      <Button
+        className={
+          path === `/student/get-attendance/${user.registrationID}`
+            ? classes.active
+            : classes.button
+        }
+        component={Link}
+        to={`/student/get-attendance/${user.registrationID}`}
+      >
+        Get Attendance
       </Button>
     </Fragment>
   );
