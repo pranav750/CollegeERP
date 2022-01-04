@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
 
 const attendanceSchema = new mongoose.Schema({
-  studentIDs: [
-    {
-      type: String,
-    },
-  ],
+  studentIDs: {
+    type: Array,
+  },
   date: {
     type: String,
     required: true,
