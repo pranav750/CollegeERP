@@ -6,7 +6,7 @@ import { SET_LOADING } from "../../../store/constants/constants";
 import FormLayout from "../../Form/FormLayout";
 import Form from "./Form";
 
-const AdminLogin = () => {
+const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -43,4 +43,4 @@ const AdminLogin = () => {
   );
 };
 
-export default AdminLogin;
+export default Login;
