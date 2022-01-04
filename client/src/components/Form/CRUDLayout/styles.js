@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/styles";
 const useStyles = makeStyles(() => ({
   mainContainer: {
     display: "flex",
-    width: "50%",
+    width: "60%",
     padding: "50px 40px",
     margin: "auto",
     borderRadius: "12px",
