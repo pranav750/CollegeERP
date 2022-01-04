@@ -1,7 +1,7 @@
 import { FormControl, InputLabel, Select, MenuItem } from "@material-ui/core";
 import useStyles from "../styles";
 
-const Semester = ({ form, inputChangeHandler }) => {
+const Year = ({ form, inputChangeHandler }) => {
   const classes = useStyles();
 
   return (
@@ -24,4 +24,4 @@ const Semester = ({ form, inputChangeHandler }) => {
   );
 };
 
-export default Semester;
+export default Year;
