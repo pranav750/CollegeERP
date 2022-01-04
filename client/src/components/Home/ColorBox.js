@@ -1,8 +1,10 @@
 import { Typography } from "@material-ui/core";
 import AdminLogin from "../Admin/Login/Login";
 import AdminRegister from "../Admin/Login/Register";
-import StudentLogin from "../Student/Login/StudentLogin";
-import TeacherLogin from "../Teacher/Login/TeacherLogin";
+import StudentLogin from "../Student/Login/Login";
+import StudentRegister from "../Student/Login/Register";
+import TeacherLogin from "../Teacher/Login/Login";
+import TeacherRegister from "../Teacher/Login/Register";
 import useStyles from "./styles";
 
 const ColorBox = ({ user, color, register }) => {
@@ -16,11 +18,11 @@ const ColorBox = ({ user, color, register }) => {
   } else if (user === "Student") {
     info =
       "Student can view their test results and check their attendance. The best feature for student is the chatbox. Any student of the college can talk with any teacher and any student of that particular college. This helps them to reach out to their seniors and teachers for help.";
-    login = <StudentLogin />;
+    login = register ? <StudentRegister /> : <StudentLogin />;
   } else if (user === "Teacher") {
     info =
       "Teachers has the options to mark attendance on the appliction. They can give marks to the students for particular exams. Not only this, to show the students their result, they can download the pdf and send it to the class";
-    login = <TeacherLogin />;
+    login = register ? <TeacherRegister /> : <TeacherLogin />;
   }
   let firstDiv = <div className={classes.loginContainer}>{login}</div>;
 
