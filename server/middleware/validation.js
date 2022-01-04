@@ -16,9 +16,14 @@ import {
   semesterCheck,
   yearCheck,
   departmentCheck,
+  testCheck,
+  outOfCheck,
+  testAndOutOfCheck,
+  totalCheck,
+  dateCheck,
 } from "../utils/check.js";
 
-export const isRegistrationValid = (req, res, next) => {
+export const isRegistrationValid = async (req, res, next) => {
   if (
     req.body.type === "Student" ||
     req.body.type === "Admin" ||
@@ -73,6 +78,37 @@ export const isRegistrationValid = (req, res, next) => {
     if (nameChecked) return res.status(422).json({ message: nameChecked });
   }
 
+  if (req.body.type === "Admin") {
+    const admin = await Admin.findOne({ aadhar: req.body.aadhar });
+    if (admin)
+      return res.status(422).json({
+        message: `Admin with aadhar ${req.body.aadhar} already exists`,
+      });
+  } else if (req.body.type === "Student") {
+    const student = await Student.findOne({ aadhar: req.body.aadhar });
+    if (student)
+      return res.status(422).json({
+        message: `Student with aadhar ${req.body.aadhar} already exists`,
+      });
+  } else if (req.body.type === "Teacher") {
+    const teacher = await Teacher.findOne({ aadhar: req.body.aadhar });
+    if (teacher)
+      return res.status(422).json({
+        message: `Teacher with aadhar ${req.body.aadhar} already exists`,
+      });
+  } else if (req.body.type === "Subject") {
+    const subject = await Subject.findOne({
+      name: req.body.name,
+      department: req.body.department,
+    });
+    if (subject)
+      return res
+        .status(422)
+        .json({
+          message: `Subject with name ${req.body.name} in department ${req.body.department} already exists`,
+        });
+  }
+
   next();
 };
 
@@ -123,6 +159,50 @@ export const isUpdationValid = (req, res, next) => {
     const nameChecked = nameCheck(req.body.name, req.body.type);
     if (nameChecked) return res.status(422).json({ message: nameChecked });
   }
+
+  next();
+};
+
+export const isMarkUpdationValid = async (req, res, next) => {
+  const testChecked = testCheck(req.body.test);
+  if (testChecked) return res.status(422).json({ message: testChecked });
+
+  const student = await Student.findOne({ registraionID: req.body.studentID });
+  if (!student)
+    return res
+      .status(422)
+      .json({ message: `Student ID ${req.body.studentID} is not valid` });
+
+  const subject = await Subject.findOne({ registraionID: req.body.subjectID });
+  if (!subject)
+    return res
+      .status(422)
+      .json({ message: `Subject ID ${req.body.subjectID} is not valid` });
+
+  const outOfChecked = outOfCheck(req.body.outOf);
+  if (outOfChecked) return res.status(422).json({ message: outOfChecked });
+
+  const testAndOutOfChecked = testAndOutOfCheck(req.body.test, req.body.outOf);
+  if (testAndOutOfChecked)
+    return res.status(422).json({ message: testAndOutOfChecked });
+
+  const totalChecked = totalCheck(req.body.total, req.body.outOf);
+  if (totalChecked) return res.status(422).json({ message: totalChecked });
+
+  next();
+};
+
+export const isMarkAddtionValid = async (req, res, next) => {
+  console.log(req.body);
+  const testChecked = testCheck(req.body.test);
+  if (testChecked) return res.status(422).json({ message: testChecked });
+
+  const outOfChecked = outOfCheck(req.body.outOf);
+  if (outOfChecked) return res.status(422).json({ message: outOfChecked });
+
+  const testAndOutOfChecked = testAndOutOfCheck(req.body.test, req.body.outOf);
+  if (testAndOutOfChecked)
+    return res.status(422).json({ message: testAndOutOfChecked });
 
   next();
 };
