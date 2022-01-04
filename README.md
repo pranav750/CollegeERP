@@ -1,6 +1,6 @@
 # **CollegeERP**
 
-<!-- [![SpyDark](https://github.com/pranav750/SpyDark/blob/main/SpyDark.gif)](https://drive.google.com/file/d/1e0V3UxiAkOnxWarhY-CvX1KsRpV2dtAV/view) -->
+[![CollegeERP](https://github.com/pranav750/CollegeERP/blob/main/CollegeERP.gif)](https://drive.google.com/file/d/1XlgEI_yr9hiIXThvzn-HHx6MOoAEOkHC/view?usp=sharing)
 
 
 ### Table of Content
