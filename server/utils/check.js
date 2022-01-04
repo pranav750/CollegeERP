@@ -1,3 +1,5 @@
+import e from "express";
+
 export const nameCheck = (name, type) => {
   if (type !== "Subject") {
     if (name.includes(" ")) return `${type} name should not contain spaces`;
@@ -109,4 +111,54 @@ export const departmentCheck = (department) => {
     default:
       return "No Department Found";
   }
+};
+
+export const dateCheck = (date) => {
+  if (date.length == 0) return "Date is not valid";
+
+  return false;
+};
+
+export const testCheck = (test) => {
+  switch (test) {
+    case "ESE":
+      return false;
+
+    case "MST":
+      return false;
+
+    case "TA":
+      return false;
+
+    default:
+      return "No Test Found";
+  }
+};
+
+export const outOfCheck = (outOf) => {
+  switch (outOf) {
+    case 60:
+      return false;
+
+    case 20:
+      return false;
+
+    default:
+      return "Total Not Valid";
+  }
+};
+
+export const testAndOutOfCheck = (test, outOf) => {
+  if (test === "ESE" && outOf === 60) return false;
+
+  if (test === "MST" && outOf === 20) return false;
+
+  if (test === "TA" && outOf === 20) return false;
+
+  return "Test and Out Of do not match";
+};
+
+export const totalCheck = (total, outOf) => {
+  if (total <= outOf) return false;
+  else return "Total not valid";
 };
