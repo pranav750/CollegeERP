@@ -28,23 +28,19 @@ CollegeERP is a college database management system. It is a full stack web appli
 
 ### Frontend
 
-- [ReactJS](https://reactjs.org/) - React (also known as React.js or ReactJS) is an open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.
+- [ReactJS](https://reactjs.org/) - React (also known as React.js or ReactJS) is an open-source front-end JavaScript library for building user interfaces or UI components.
 
 - [Redux](https://react-redux.js.org) - React Redux is the official React UI bindings layer for Redux. It lets your React components read data from a Redux store, and dispatch actions to the store to update state.
 
-- [MaterialUI](https://material-ui.com/) - Material Design (codenamed Quantum Paper)[5] is a design language developed by Google in 2014. Expanding on the "card" motifs that debuted in Google Now, Material Design uses more grid-based layouts, responsive animations and transitions, padding, and depth effects such as lighting and shadows.
+- [MaterialUI](https://material-ui.com/) - Material Design (codenamed Quantum Paper)[5] is a design language developed by Google in 2014. 
 
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
 
 ### Backend
 
-<!-- - [Django Rest Framework](https://www.django-rest-framework.org/) - Django Rest Framework lets you create RESTful APIs: A way to transfer information between an interface and a database in a simple way. It separates user interface and data storage and communicates user and database sending a .json file.
-- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-- [Requests](https://pypi.org/project/requests/)
-- [Stem](https://www.geeksforgeeks.org/python-stemming-words-with-nltk/)
-- [Threading](https://docs.python.org/3/library/threading.html)
-- [Concurrent](https://docs.python.org/3/library/concurrent.futures.html)
-- [Tor Browser](https://vpnoverview.com/privacy/anonymous-browsing/tor/) -->
+- [Node.js](https://nodejs.org/en/) - As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.
+- [Express.js](http://expressjs.com) - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- [Mongoose](https://mongoosejs.com) - Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
 
 ### DataBase
 
