@@ -48,7 +48,13 @@ CollegeERP is a college database management system. It is a full stack web appli
 
 ## Application
 
+CollegeERP can be used as a college database management system and any school or college can use this application to keep track of their institute with just a few changes.
+
 ## Future Scope
+
+- We can use Socket.io to add a chat system for Student and Teacher. Student can then ask their doubts to Teachers and they can also talk with other students to know how they learnt a particular skill, etc.
+- We can give the option of timetable where the Admin can create the timetable for each semester.
+- The validation can be improved furthermore. I have tried to keep the validation logic correct and there might be few things missing.
 
 ## Installation
 
@@ -96,6 +102,5 @@ You can see the demo video of the project below.
 
 You will get all the links that are related to the project below-
 
-<!-- - [SpyDark]() - The link to SpyDark Website. -->
 <!-- - [Github Repo's Link](https://github.com/pranav750/SpyDark) - All the code of Project.
 - [Demo Video](https://drive.google.com/file/d/1e0V3UxiAkOnxWarhY-CvX1KsRpV2dtAV/view) - Demo Video of Project. -->
