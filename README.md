@@ -6,7 +6,6 @@
 ### Table of Content
 
 - [Introduction](#Introduction)
-- [Features](#Features)
 - [Tech Stack](#Tech-Stack)
   - [Frontend](#Frontend)
   - [Backend](#Backend)
@@ -14,15 +13,12 @@
 - [Application](#Application)
 - [Future Scope](#Future-Scope)
 - [Installation](#Installation)
-- [Demo](#Demo)
+<!-- - [Demo](#Demo) -->
 - [Links](#Links)
 
 ## Introduction
 
 CollegeERP is a college database management system. It is a full stack web application which can be used as a tool to store the information of Students, Teachers, Subjects and Admins on the campus on a MongoDB database. Admin can perform create, update, delete or read (CRUD) operations on Student, Teacher, Subject and Admin itself. Teachers can give marks of a particular test of a Subject to the Students. Students can use the application to get their marks on respective Subjects. Teachers are also given the functionality to mark attendance of a particular day. 
-
-## Features
-
 
 ## Tech Stack
 
@@ -92,15 +88,15 @@ $ npm start
 ```
 Now the app should get running on localhost:3000 :
 
-## Demo
+<!-- ## Demo
 
 You can see the demo video of the project below.
 
-<!-- [![Demo Video](https://github.com/pranav750/SpyDark/blob/main/SpyDark.gif)](https://drive.google.com/file/d/1e0V3UxiAkOnxWarhY-CvX1KsRpV2dtAV/view) -->
+<!-- [![Demo Video](https://github.com/pranav750/SpyDark/blob/main/SpyDark.gif)](https://drive.google.com/file/d/1e0V3UxiAkOnxWarhY-CvX1KsRpV2dtAV/view) --> -->
 
 ## Links
 
 You will get all the links that are related to the project below-
 
-<!-- - [Github Repo's Link](https://github.com/pranav750/SpyDark) - All the code of Project.
-- [Demo Video](https://drive.google.com/file/d/1e0V3UxiAkOnxWarhY-CvX1KsRpV2dtAV/view) - Demo Video of Project. -->
+- [Github Repo's Link](https://github.com/pranav750/SpyDark) - All the code of Project.
+- [Live Hosted](https://college-erp.netlify.app/) - Website is live on this link.
