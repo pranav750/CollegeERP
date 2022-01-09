@@ -98,5 +98,5 @@ You can see the demo video of the project below.
 
 You will get all the links that are related to the project below-
 
-- [Github Repo's Link](https://github.com/pranav750/SpyDark) - All the code of Project.
+- [Github Repo's Link](https://github.com/pranav750/CollegeERP) - All the code of Project.
 - [Live Hosted](https://college-erp.netlify.app/) - Website is live on this link.
