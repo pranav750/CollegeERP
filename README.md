@@ -13,7 +13,6 @@
 - [Application](#Application)
 - [Future Scope](#Future-Scope)
 - [Installation](#Installation)
-<!-- - [Demo](#Demo) -->
 - [Links](#Links)
 
 ## Introduction
